@@ -1,12 +1,10 @@
 package controller
 
 import (
-	"fmt"
 	"net/http"
-
-	"github.com/julienschmidt/httprouter"
+	"github.com/gin-gonic/gin"
 )
 
-func Hello(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
-	fmt.Fprintf(w, "hello, %s!\n", ps.ByName("name"))
+func Hello(c *gin.Context) {
+	c.String(http.StatusOK, "hello, " +  c.Param("name")+ "!\n")
 }
