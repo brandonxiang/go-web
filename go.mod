@@ -1,4 +1,4 @@
-module example.com/m/v2
+module github.com/brandonxiang/go-example
 
 go 1.18
 
