@@ -14,8 +14,8 @@ import (
 
 func main() {
     router := httprouter.New()
-    router.GET("/", controller.Welcome)
-    router.GET("/hello/:name", controller.hello)
+    router.GET("/", controller.Index)
+    router.GET("/hello/:name", controller.Hello)
 
     log.Fatal(http.ListenAndServe(":8080", router))
 }
